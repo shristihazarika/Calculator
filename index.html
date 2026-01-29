@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Calculator with advanced features">
+    <title>Modern Calculator - EliteStore</title>
+    <link rel="stylesheet" href="calculator-styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <!-- Calculator Header -->
+        <div class="calculator-header">
+            <h1>🧮 Calculator</h1>
+            <div class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+            </div>
+        </div>
+
+        <!-- Calculator Body -->
+        <div class="calculator">
+            <!-- Display Section -->
+            <div class="display-section">
+                <div class="previous-operand" id="previousOperand"></div>
+                <div class="current-operand" id="currentOperand">0</div>
+            </div>
+
+            <!-- Buttons Grid -->
+            <div class="buttons-grid">
+                <!-- Row 1: Clear, Delete, Percentage, Division -->
+                <button class="btn btn-function" data-action="clear">AC</button>
+                <button class="btn btn-function" data-action="delete">DEL</button>
+                <button class="btn btn-operator" data-action="percentage">%</button>
+                <button class="btn btn-operator" data-operator="÷">÷</button>
+
+                <!-- Row 2: Numbers 7, 8, 9, Multiplication -->
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator" data-operator="×">×</button>
+
+                <!-- Row 3: Numbers 4, 5, 6, Subtraction -->
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operator" data-operator="-">-</button>
+
+                <!-- Row 4: Numbers 1, 2, 3, Addition -->
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-operator" data-operator="+">+</button>
+
+                <!-- Row 5: Zero, Decimal, Equals -->
+                <button class="btn btn-number btn-zero" data-number="0">0</button>
+                <button class="btn btn-number" data-action="decimal">.</button>
+                <button class="btn btn-equals" data-action="equals">=</button>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <div class="history-header">
+                    <h3>History</h3>
+                    <button class="clear-history-btn" id="clearHistory">Clear</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="empty-history">No calculations yet</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="calculator-footer">
+            <p>Created by <strong>Shristi Hazarika</strong></p>
+            <p class="footer-contact">📧 Hazarikashristi4@gmail.com |</p>
+        </div>
+    </div>
+
+    <!-- Keyboard Shortcuts Info -->
+    <div class="shortcuts-info" id="shortcutsInfo">
+        <button class="shortcuts-toggle" id="shortcutsToggle">⌨️</button>
+        <div class="shortcuts-panel" id="shortcutsPanel">
+            <h4>Keyboard Shortcuts</h4>
+            <ul>
+                <li><kbd>0-9</kbd> - Numbers</li>
+                <li><kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> <kbd>/</kbd> - Operators</li>
+                <li><kbd>Enter</kbd> or <kbd>=</kbd> - Calculate</li>
+                <li><kbd>Backspace</kbd> - Delete</li>
+                <li><kbd>Escape</kbd> - Clear</li>
+                <li><kbd>.</kbd> - Decimal point</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon" id="toastIcon">✅</span>
+        <span class="toast-message" id="toastMessage">Copied to clipboard!</span>
+    </div>
+
+    <!-- Include Calculator JavaScript -->
+    <script src="calculator.js"></script>
+</body>
+</html>
